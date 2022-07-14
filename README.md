@@ -1,11 +1,16 @@
+### Sobre
+
 # TODO List
 
 ## Aplicação para teste de desenvolvimento de feature e consumo de API
 
-Status: TODO List concluído
+### Status
+
+## TODO List concluído
 
 Tabela de conteúdos
    * [Sobre](#sobre)
+   * [Status](#status)
    * [Tabela de Conteudo](#tabela-de-conteudo)
    * [Features](#features)
    * [Instalação](#instalacao)
@@ -18,7 +23,8 @@ Tabela de conteúdos
 - [x] Lista de usuários
 - [x] Lista de tarefas
 
- 
+### Utilização
+
 ### Dependências
 
 ### Subindo e rodando a aplicação front-end (cliente)
@@ -53,5 +59,5 @@ As seguintes tecnologias foram usadas:
 
 Autor: Rodrigo Moreira
 
-Copyright (c) <2020> <Rodrigo Moreira>
+Copyright (c) <2022> <RodrigoMoreira>
 
