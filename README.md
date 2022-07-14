@@ -14,7 +14,6 @@ Tabela de conteúdos
    * [Tabela de Conteudo](#tabela-de-conteudo)
    * [Features](#features)
    * [Instalação](#instalacao)
-   * [Utilização](#utilização)
       * [Dependências](#dependências)
    * [Tecnologias](#tecnologias)
 
@@ -23,7 +22,7 @@ Tabela de conteúdos
 - [x] Lista de usuários
 - [x] Lista de tarefas
 
-### Utilização
+### Instalação
 
 ### Dependências
 
