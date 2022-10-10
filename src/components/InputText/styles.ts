@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const InputWrap = styled.textarea`
+export const InputWrap = styled.input`
   width: 90%;
-  height: 90%;
   padding: 10px;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 10px;
+
   &:hover {
-    border: 2px solid #0074d9;
-    transition: 0.5s;
+    border: 1px solid #0074d9;
+    transition: 0.2s;
   }
 `;

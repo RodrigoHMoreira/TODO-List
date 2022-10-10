@@ -1,7 +1,13 @@
 import { Wrap } from "./styles";
 
 type ButtonSubmitProps = {
-  putSubmit: () => void;
+  putSubmit: (
+    name: string,
+    company: string,
+    email: string,
+    phone: string,
+    website: string
+  ) => void;
   content: string;
 };
 

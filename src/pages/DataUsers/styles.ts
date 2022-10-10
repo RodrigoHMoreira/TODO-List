@@ -1,57 +1,74 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
+  padding: 10px;
+  color: #474a51;
+
   header {
-    padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    grid-gap: 10px;
+    padding: 10px 0;
+    margin: 75px 0 10px 0;
 
-    h1 {
-      color: #474a51;
-      font-size: 30px;
-    }
+    section {
+      text-align: end;
+  
 
-    #btn-desktop {
-      display: flex;
-    }
-
-    #btn-mobile {
-      display: none;
-      align-items: center;
-      justify-content: center;
-
-      button {
-        display: flex;
-        border: none;
-        background: transparent;
-        background: #0074d9;
+      img {
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
-        padding: 15px;
-        color: #ffffff;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        padding: 10px 0;
+      }
+
+      a {
+        width: 100%;
+        text-decoration: none;
+        color: #474a51;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        grid-gap: 10px;
+        padding: 10px 0;
         transition: 0.2s;
-        font-weight: bold;
 
         &:hover {
-          cursor: pointer;
+          color: #0074d9;
         }
       }
     }
 
     @media screen and (max-width: 767px) {
-      grid-gap: 10px;
+      flex-direction: column;
+      margin: 10px 0;
 
-      #btn-mobile {
+
+      section {
         display: flex;
-      }
+        flex-direction: column;
+        align-items: center;
 
-      #btn-desktop {
-        display: none;
+        a {
+          justify-content: center;
+        }
       }
     }
   }
 
-  div {
+  /* div {
     padding: 10px;
 
     table {
@@ -79,11 +96,6 @@ export const Wrap = styled.div`
         background: #d3d3d3;
         text-align: start;
         padding: 10px;
-
-        &:first-child, :last-child {
-          width: 100px;
-          text-align: center;
-        }
       }
 
       td {
@@ -102,33 +114,16 @@ export const Wrap = styled.div`
         }
 
         td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &:last-child {
-          justify-content: center;
-        }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
 
         td::before {
-        content: attr(data-label);
-        font-weight: bold;
-      }
+          content: attr(data-label);
+          font-weight: bold;
+        }
       }
     }
-  }
-`;
-
-export const Background = styled.body`
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 0px;
-  top: 0;
-  z-index: 10;
+  } */
 `;

@@ -1,51 +1,61 @@
-import { useContext, useState } from "react";
-import { UserContext } from "../../context/UserContext";
+import { useState } from "react";
 import { ButtonCancel } from "../ButtonCancel";
-import { ButtonClose } from "../ButtonClose";
 import { ButtonSubmit } from "../ButtonSubmit";
 import { InputText } from "../InputText";
 import { LabelAdd } from "../LabelAdd";
-// import { RegisterService } from "./service";
-import { Header, Main, Footer, Wrap, Tittle, InputRadio } from "./styles";
+import { Wrap } from "./styles";
 
-export const Modal = () => {
-  const {
-    toggleModalAdd,
-    assignment,
-    getAssignment,
-    postAssignment,
-    getChecked,
-  } = useContext(UserContext);
+type ModalProps = {
+  getDataForm: (
+    name: string,
+    company: string,
+    email: string,
+    phone: string,
+    website: string
+  ) => void;
+  toggleModalAdd: () => void;
+};
+
+export const Modal = ({ getDataForm, toggleModalAdd }: ModalProps) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
+  const [website, setWebsite] = useState("");
 
   return (
     <>
       <Wrap>
-        <Header>
-          <ButtonClose putClose={toggleModalAdd} />
-        </Header>
-        <Tittle>Adicionar Tarefa</Tittle>
-        <Main>
-          <LabelAdd content={"Escreva o nome da tarefa:"} />
-          <InputText onChange={getAssignment} value={assignment} />
-        </Main>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "start",
-            width: " 85%",
-          }}
-        >
-          <InputRadio
-            onChange={(event) => {
-              getChecked(event.target.checked);
-            }}
-          />
-          <LabelAdd content={"Concluída"} />
-        </div>
-        <Footer>
+        <header>
+          <h2>Adicionar Usuário</h2>
+        </header>
+        <main>
+          <LabelAdd content={"Usuário:"} />
+          <InputText onChange={setName} value={name} />
+          <LabelAdd content={"Compania:"} />
+          <InputText onChange={setCompany} value={company} />
+          <LabelAdd content={"E-mail:"} />
+          <InputText onChange={setEmail} value={email} />
+          <LabelAdd content={"Telefone:"} />
+          <InputText onChange={setPhone} value={phone} />
+          <LabelAdd content={"Website:"} />
+          <InputText onChange={setWebsite} value={website} />
+        </main>
+        <footer>
           <ButtonCancel putCancel={toggleModalAdd} content={"Cancelar"} />
-          <ButtonSubmit putSubmit={postAssignment} content={"Enviar"} />
-        </Footer>
+          <ButtonSubmit
+            putSubmit={() => {
+              getDataForm(
+                name,
+                company,
+                email,
+                phone,
+                website
+              );
+            }}
+            content={"Enviar"}
+          />
+        </footer>
       </Wrap>
     </>
   );
